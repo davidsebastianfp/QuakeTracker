@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Text sizes -->
+    <dimen name="ds_font_xxsmall">7sp</dimen>
+    <dimen name="ds_font_xsmall">9sp</dimen>
+    <dimen name="ds_font_small">10sp</dimen>
+    <dimen name="ds_font_medium">14sp</dimen>
+    <dimen name="ds_font_large">20sp</dimen>
+    <dimen name="ds_font_xlarge">24sp</dimen>
+    <dimen name="ds_font_xxlarge">30sp</dimen>
+
+
+    <!-- Spacing -->
+    <dimen name="ds_spacing_14">56dp</dimen>
+</resources>
