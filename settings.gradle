@@ -14,3 +14,8 @@ dependencyResolutionManagement {
 }
 rootProject.name = "QuakeTracker"
 include ':app'
+include ':core:network'
+include ':core:regions'
+include ':feature:settings'
+include ':core:designsystem'
+include ':core:commons'

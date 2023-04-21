@@ -1,11 +1,11 @@
 package com.sebferna.android.quaketracker.home.presentation
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.sebferna.android.quaketracker.core.date.DateFormatter
-import com.sebferna.android.quaketracker.core.regions.RegionsController
+import com.sebferna.android.core.regions.api.RegionsController
 import com.sebferna.android.quaketracker.home.data.HomeRepository
 import com.sebferna.android.quaketracker.home.data.model.HomeEarthQuake
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -15,7 +15,7 @@ import javax.inject.Inject
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     private val homeRepository: HomeRepository,
-    private val dateFormatter: DateFormatter,
+    private val dateFormatter: com.sebferna.android.core.commons.DateFormatter,
     private val regionsController: RegionsController
 ): ViewModel() {
     private val _earthQuakes = MutableLiveData<HomeEarthQuake>()
@@ -45,6 +45,7 @@ class HomeViewModel @Inject constructor(
 
             } catch (e: Exception) {
                 _earthQuakes.value = HomeEarthQuake.Error
+                Log.e("QuackeTracker", "getNearbyEarthQuakes: ${e.message}", )
             }
         }
     }

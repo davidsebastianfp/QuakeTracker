@@ -4,12 +4,6 @@
     <string name="home">Home</string>
     <string name="settings">Settings</string>
     <string name="recentEarthquakes">Recent earthquakes</string>
-    <string name="north_america">North America</string>
-    <string name="south_america">South America</string>
-    <string name="europe">Europe</string>
-    <string name="asia">Asia</string>
-    <string name="africa">Africa</string>
-    <string name="oceania">Oceania</string>
     <!-- Home Strings -->
     <string name="fetching_data">Fetching data</string>
     <string name="error_fetching_data">Error fetching data</string>

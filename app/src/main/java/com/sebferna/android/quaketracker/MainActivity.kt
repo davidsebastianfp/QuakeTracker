@@ -13,14 +13,14 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.sebferna.android.quaketracker.bottomNavigation.BottomNavigationBar
-import com.sebferna.android.quaketracker.designsystem.QuakeTrackerTopBar
+import com.sebferna.android.core.designsystem.QuakeTrackerTopBar
 import com.sebferna.android.quaketracker.navigation.Destinations.Home
 import com.sebferna.android.quaketracker.navigation.Destinations.Companion.bottomNavigationScreens
 import com.sebferna.android.quaketracker.navigation.NavigationHost
 import com.sebferna.android.quaketracker.navigation.navigateSingleTopTo
-import com.sebferna.android.quaketracker.ui.theme.DarkColorPalette
-import com.sebferna.android.quaketracker.ui.theme.LightColorPalette
-import com.sebferna.android.quaketracker.ui.theme.QuakeTrackerTheme
+import com.sebferna.android.core.designsystem.theme.DarkColorPalette
+import com.sebferna.android.core.designsystem.theme.LightColorPalette
+import com.sebferna.android.core.designsystem.theme.QuakeTrackerTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

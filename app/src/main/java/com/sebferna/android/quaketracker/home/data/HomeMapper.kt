@@ -1,7 +1,7 @@
 package com.sebferna.android.quaketracker.home.data
 
-import com.sebferna.android.quaketracker.core.network.model.NetworkEarthQuake
-import com.sebferna.android.quaketracker.core.network.model.NetworkFeature
+import com.sebferna.android.core.network.model.NetworkEarthQuake
+import com.sebferna.android.core.network.model.NetworkFeature
 import com.sebferna.android.quaketracker.home.data.model.HomeEarthQuake
 import com.sebferna.android.quaketracker.home.data.model.HomeEarthQuakeItem
 import java.text.SimpleDateFormat
@@ -15,9 +15,9 @@ fun NetworkEarthQuake.mapToHomeModel(): HomeEarthQuake {
         } else if (features == null ) {
             HomeEarthQuake.Error
         } else {
-            val items = features.filter {
+            val items = features?.filter {
                 it.isDataOk()
-            }.map { filteredData ->
+            }?.map { filteredData ->
                 HomeEarthQuakeItem(
                     filteredData.properties?.place.orEmpty(),
                     filteredData.properties?.mag.toString(),
@@ -26,8 +26,12 @@ fun NetworkEarthQuake.mapToHomeModel(): HomeEarthQuake {
                     filteredData.geometry?.coordinates?.get(1) ?: 0f,
                     filteredData.geometry?.coordinates?.get(2)?.toInt() ?: 0
                 )
-            }.toList()
-            HomeEarthQuake.Success(items)
+            }?.toList()
+            if (items != null) {
+                HomeEarthQuake.Success(items)
+            } else {
+                HomeEarthQuake.Error
+            }
         }
     } else return HomeEarthQuake.Error
 }
@@ -35,8 +39,8 @@ fun NetworkEarthQuake.mapToHomeModel(): HomeEarthQuake {
 
 fun NetworkFeature.isDataOk(): Boolean {
     return properties?.place != null &&
-            properties.mag != null &&
-            properties.time != null &&
+            properties?.mag != null &&
+            properties?.time != null &&
             !geometry?.coordinates.isNullOrEmpty()
 }
 

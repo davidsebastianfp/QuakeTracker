@@ -1,6 +1,6 @@
 package com.sebferna.android.quaketracker.home.data
 
-import com.sebferna.android.quaketracker.core.network.QuakeTrackerDataSource
+import com.sebferna.android.core.network.QuakeTrackerDataSource
 import com.sebferna.android.quaketracker.home.data.model.HomeEarthQuake
 import javax.inject.Inject
 

@@ -14,12 +14,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.sebferna.android.core.designsystem.EarthQuakeItem
+import com.sebferna.android.core.designsystem.SPACING_4
 import com.sebferna.android.quaketracker.R
-import com.sebferna.android.quaketracker.designsystem.EarthQuakeItem
-import com.sebferna.android.quaketracker.designsystem.SPACING_4
 import com.sebferna.android.quaketracker.home.data.model.HomeEarthQuake
-import com.sebferna.android.quaketracker.ui.theme.Typography
-import com.sebferna.android.quaketracker.ui.theme.header6
+import com.sebferna.android.core.designsystem.theme.Typography
+import com.sebferna.android.core.designsystem.theme.header6
 
 
 @Composable
