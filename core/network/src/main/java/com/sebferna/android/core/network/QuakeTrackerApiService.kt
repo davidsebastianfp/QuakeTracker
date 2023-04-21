@@ -1,25 +1,11 @@
 package com.sebferna.android.core.network
 
 import com.sebferna.android.core.network.model.NetworkEarthQuake
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 import javax.inject.Inject
 import javax.inject.Singleton
-
-private const val BASE_URL = "https://earthquake.usgs.gov/fdsnws/event/1/"
-
-private val moshi = Moshi.Builder()
-    .add(KotlinJsonAdapterFactory())
-    .build()
-
-private val retrofit = Retrofit.Builder()
-    .addConverterFactory(MoshiConverterFactory.create(moshi))
-    .baseUrl(BASE_URL)
-    .build()
 
 private interface QuakeTrackerApiService {
     @GET("query")
@@ -38,7 +24,9 @@ private interface QuakeTrackerApiService {
 }
 
 @Singleton
-class EarthQuakeNetwork @Inject constructor() : QuakeTrackerDataSource {
+class EarthQuakeNetwork @Inject constructor(
+    private val retrofit: Retrofit
+) : QuakeTrackerDataSource {
     private val networkApi: QuakeTrackerApiService by lazy {
         retrofit.create(QuakeTrackerApiService::class.java)
     }

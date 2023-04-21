@@ -10,9 +10,7 @@ import com.sebferna.android.core.regions.api.south_america_rectangle
 import com.sebferna.android.core.regions.impl.SharedPreferencesController.Companion.DEFAULT_INT_VALUE
 import com.sebferna.android.core.regions.R
 import javax.inject.Inject
-import javax.inject.Singleton
 
-@Singleton
 class RegionsControllerImpl @Inject constructor(
     private val sharedPreferencesController: SharedPreferencesController
 ): RegionsController {
