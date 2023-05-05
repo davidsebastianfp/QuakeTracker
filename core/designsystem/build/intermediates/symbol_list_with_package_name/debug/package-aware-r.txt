@@ -1,0 +1,3 @@
+com.sebferna.android.core.designsystem
+font mint_sans_bold
+font mint_sans_regular

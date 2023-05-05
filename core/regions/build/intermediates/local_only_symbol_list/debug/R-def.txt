@@ -1,0 +1,8 @@
+R_DEF: Internal format may change without notice
+local
+string africa
+string asia
+string europe
+string north_america
+string oceania
+string south_america

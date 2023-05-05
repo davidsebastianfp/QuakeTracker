@@ -1,0 +1,2 @@
+int font mint_sans_bold 0x0
+int font mint_sans_regular 0x0

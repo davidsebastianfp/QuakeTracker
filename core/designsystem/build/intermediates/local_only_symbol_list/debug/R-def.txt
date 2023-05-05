@@ -1,0 +1,4 @@
+R_DEF: Internal format may change without notice
+local
+font mint_sans_bold
+font mint_sans_regular

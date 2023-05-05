@@ -1,0 +1,3 @@
+int string earth_quakes_list_empty 0x0
+int string error_fetching_data 0x0
+int string fetching_data 0x0

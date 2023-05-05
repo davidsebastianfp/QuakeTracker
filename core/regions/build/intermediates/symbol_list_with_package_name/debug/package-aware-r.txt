@@ -1,0 +1,7 @@
+com.sebferna.android.core.regions
+string africa
+string asia
+string europe
+string north_america
+string oceania
+string south_america

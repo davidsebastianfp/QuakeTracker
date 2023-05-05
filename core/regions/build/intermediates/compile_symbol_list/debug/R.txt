@@ -1,0 +1,6 @@
+int string africa 0x0
+int string asia 0x0
+int string europe 0x0
+int string north_america 0x0
+int string oceania 0x0
+int string south_america 0x0

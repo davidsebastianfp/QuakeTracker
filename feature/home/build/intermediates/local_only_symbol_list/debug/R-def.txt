@@ -1,0 +1,5 @@
+R_DEF: Internal format may change without notice
+local
+string earth_quakes_list_empty
+string error_fetching_data
+string fetching_data

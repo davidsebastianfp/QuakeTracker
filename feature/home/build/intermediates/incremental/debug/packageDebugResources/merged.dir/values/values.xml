@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="earth_quakes_list_empty">At the moment there are no earthquakes in this area</string>
+    <string name="error_fetching_data">Error fetching data</string>
+    <string name="fetching_data">Fetching data</string>
+</resources>
