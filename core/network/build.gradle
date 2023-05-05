@@ -1,0 +1,19 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+}
+apply from: "$rootDir/gradle/base-gradle.gradle"
+
+android {
+    namespace 'com.sebferna.android.core.network'
+}
+
+dependencies {
+    implementation(libs.hilt)
+    kapt(libs.hilt.compiler)
+    implementation (libs.retrofit)
+    implementation (libs.retrofit.converter.moshi)
+    implementation(libs.moshi)
+}

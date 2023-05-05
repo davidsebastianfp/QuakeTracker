@@ -1,0 +1,32 @@
+[versions]
+coreKtx = "1.7.0"
+lifecycleRuntimeKtx = "2.5.1"
+activityCompose = "1.6.1"
+composeUi = "1.1.1"
+material = "1.1.1"
+navigationCompose = "2.5.3"
+runtimeLivedata = "1.3.3"
+hiltNavigationCompose = "1.0.0"
+retrofit = "2.9.0"
+moshiKotlin = "1.9.3"
+hiltAndroid = "2.44"
+
+[libraries]
+androidx-core-ktx = {group = "androidx.core", name = "core-ktx", version.ref = "coreKtx"}
+androidx-lifecycle-runtime-ktx = {group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx"}
+androidx-activity-compose = {group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose"}
+androidx-compose-ui = {group = "androidx.compose.ui", name = "ui", version.ref = "composeUi"}
+androidx-compose-ui-tooling-preview = {group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "composeUi"}
+androidx-compose-material = {group = "androidx.compose.material", name = "material", version.ref = "material"}
+androidx-navigation-compose = {group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose"}
+androidx-compose-runtime-livedata = {group = "androidx.compose.runtime", name = "runtime-livedata", version.ref = "runtimeLivedata"}
+androidx-hilt-navigation-compose = {group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose"}
+androidx-compose-ui-tooling = {group = "androidx.compose.ui", name = "ui-tooling", version.ref = "composeUi"}
+
+retrofit = {group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit"}
+retrofit-converter-moshi = {group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit"}
+
+moshi = {group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshiKotlin"}
+
+hilt = {group = "com.google.dagger", name = "hilt-android", version.ref = "hiltAndroid"}
+hilt-compiler = {group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hiltAndroid"}

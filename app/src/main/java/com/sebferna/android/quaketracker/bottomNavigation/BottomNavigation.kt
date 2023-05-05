@@ -8,8 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import com.sebferna.android.quaketracker.navigation.Destinations
-import com.sebferna.android.quaketracker.ui.theme.Typography
-import com.sebferna.android.quaketracker.ui.theme.label2
+import com.sebferna.android.core.designsystem.theme.Typography
+import com.sebferna.android.core.designsystem.theme.label2
 
 @Composable
 fun BottomNavigationBar(
