@@ -1,11 +1,11 @@
-package com.sebferna.android.quaketracker.home.data
+package com.sebferna.android.feature.home.domain
 
-import com.sebferna.android.core.network.QuakeTrackerDataSource
-import com.sebferna.android.quaketracker.home.data.model.HomeEarthQuake
+import com.sebferna.android.feature.home.data.HomeRepository
+import com.sebferna.android.feature.home.domain.model.HomeEarthQuake
 import javax.inject.Inject
 
-class HomeRepository @Inject constructor(
-    private val service: QuakeTrackerDataSource
+class GetEarthQuakesUseCase @Inject constructor(
+    private val repository: HomeRepository
 ) {
     suspend fun getEarthQuakesFromSource(
         starTime: String,
@@ -16,7 +16,7 @@ class HomeRepository @Inject constructor(
         maxLongitude: Float,
         maxLatitude: Float,
     ): HomeEarthQuake {
-        return service.getEarthQuakes(
+        return repository.getEarthQuakesFromSource(
             starTime,
             endTime,
             minMagnitude,

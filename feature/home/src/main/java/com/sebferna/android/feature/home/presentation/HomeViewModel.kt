@@ -1,21 +1,22 @@
-package com.sebferna.android.quaketracker.home.presentation
+package com.sebferna.android.feature.home.presentation
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.sebferna.android.core.commons.DateFormatter
 import com.sebferna.android.core.regions.api.RegionsController
-import com.sebferna.android.quaketracker.home.data.HomeRepository
-import com.sebferna.android.quaketracker.home.data.model.HomeEarthQuake
+import com.sebferna.android.feature.home.domain.GetEarthQuakesUseCase
+import com.sebferna.android.feature.home.domain.model.HomeEarthQuake
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    private val homeRepository: HomeRepository,
-    private val dateFormatter: com.sebferna.android.core.commons.DateFormatter,
+    private val getEarthQuakesUseCase: GetEarthQuakesUseCase,
+    private val dateFormatter: DateFormatter,
     private val regionsController: RegionsController
 ): ViewModel() {
     private val _earthQuakes = MutableLiveData<HomeEarthQuake>()
@@ -35,7 +36,7 @@ class HomeViewModel @Inject constructor(
 
             try {
                 val date = dateFormatter.getTodaysDateFormatted()
-                _earthQuakes.value = homeRepository.getEarthQuakesFromSource(
+                _earthQuakes.value = getEarthQuakesUseCase.getEarthQuakesFromSource(
                     date,
                     minLongitude = preferredRectangle["min_lng"]!!,
                     minLatitude = preferredRectangle["min_lat"]!!,

@@ -5,8 +5,8 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.sebferna.android.feature.home.presentation.HomeScreen
 import com.sebferna.android.feature.settings.presentation.SettingsScreen
-import com.sebferna.android.quaketracker.home.presentation.HomeScreen
 
 @Composable
 fun NavigationHost(

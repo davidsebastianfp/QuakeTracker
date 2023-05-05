@@ -1,4 +1,4 @@
-package com.sebferna.android.quaketracker.home.data.model
+package com.sebferna.android.feature.home.domain.model
 
 sealed class HomeEarthQuake {
     data class Success(

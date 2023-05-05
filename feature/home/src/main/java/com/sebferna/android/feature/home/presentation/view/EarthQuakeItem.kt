@@ -1,4 +1,4 @@
-package com.sebferna.android.core.designsystem
+package com.sebferna.android.feature.home.presentation.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -12,11 +12,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.sebferna.android.core.designsystem.MagnitudeView
+import com.sebferna.android.core.designsystem.SPACING_2
+import com.sebferna.android.core.designsystem.SPACING_4
 import com.sebferna.android.core.designsystem.theme.QuakeTrackerTheme
-import com.sebferna.android.quaketracker.home.data.model.HomeEarthQuakeItem
 import com.sebferna.android.core.designsystem.theme.Typography
 import com.sebferna.android.core.designsystem.theme.caption1
 import com.sebferna.android.core.designsystem.theme.caption5
+import com.sebferna.android.feature.home.domain.model.HomeEarthQuakeItem
 
 @Composable
 fun EarthQuakeItem(

@@ -1,4 +1,4 @@
-package com.sebferna.android.core.network.model
+package com.sebferna.android.feature.home.data.model
 
 data class NetworkEarthQuake(
     val metadata: NetworkMetadata? = null,

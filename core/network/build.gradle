@@ -7,7 +7,7 @@ plugins {
 apply from: "$rootDir/gradle/base-gradle.gradle"
 
 android {
-    namespace "com.sebferna.android.core.network"
+    namespace 'com.sebferna.android.core.network'
 }
 
 dependencies {
